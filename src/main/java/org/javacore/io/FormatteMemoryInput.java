@@ -13,6 +13,8 @@ import java.io.IOException;
 public class FormatteMemoryInput {
 	public static void main(String[] args) throws IOException {
 		String filePath = "src" + File.separator +
+            "main" + File.separator +
+            "java" + File.separator +
 				"org" + File.separator +
 				"javacore" + File.separator +
 				"io" + File.separator +
@@ -23,7 +25,7 @@ public class FormatteMemoryInput {
 					new ByteArrayInputStream(
 							BufferedInputFileT.read(filePath).getBytes()));
 			while(true)
-				System.out.println((char)in.readByte());
+				System.out.print((char)in.readByte());
 		} catch (EOFException e) {
 			System.out.println("End of Stream");
 		}

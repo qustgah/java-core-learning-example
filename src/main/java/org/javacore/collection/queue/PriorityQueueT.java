@@ -7,9 +7,9 @@ import java.util.PriorityQueue;
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,15 +21,27 @@ import java.util.PriorityQueue;
  * @author Jeff Lee
  * @since 2015-6-17 23:32:30
  * 	PriorityQueue的使用
+ *
+ *
  */
 public class PriorityQueueT {
 	public static void main(String[] args) {
 		int[] ia = { 1, 10, 5, 3, 4, 7, 6, 9, 8 };
 		PriorityQueue<Integer> pq1 = new PriorityQueue<Integer>();
- 
-		for (int x : ia) 
-			pq1.offer(x);
+
+		for (int x : ia){
+            pq1.offer(x);
+            System.out.println("pq1: " + pq1);
+        }
 		// 注意排序
 		System.out.println("pq1: " + pq1);
+
+        while (!pq1.isEmpty()) {
+            for (Integer s : pq1) {
+                System.out.print(s + " ");
+            }
+            System.out.println();
+            System.out.println("pq.poll(): " + pq1.poll());
+        }
 	}
 }

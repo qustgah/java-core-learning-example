@@ -17,6 +17,7 @@ package org.javacore.lambda;
  */
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -51,6 +52,12 @@ public class LambdaListCompare {
 //            return Integer.compare(o1, o2);
 //        }));
 
+        list.sort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return Integer.compare(o1,o2);
+            }
+        });
         // 简写Lambda表达式
         list.sort((o1, o2) -> Integer.compare(o1, o2));
 
