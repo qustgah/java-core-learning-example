@@ -20,6 +20,7 @@ public class CountDownLatchT {
     // 线程池
     private final static ExecutorService service = Executors.newFixedThreadPool(5);
 
+
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < COUNT; i++) {
             service.execute(() -> {

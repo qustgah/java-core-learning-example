@@ -35,6 +35,7 @@ public class SerializableT {
             byteInput.close();
             System.out.println("Java反序列化耗时：" + (System.currentTimeMillis() - beginTime) + "ms");
             System.out.println("AObject：" + obj.toString());
+            
         }
     }
 }
